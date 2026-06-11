@@ -1,0 +1,6 @@
+{
+  "name": "Swagger & Blade Barbershop",
+  "description": "A high-end premium animated barbershop experience website with smooth interactions, dynamic booking, and rich media galleries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

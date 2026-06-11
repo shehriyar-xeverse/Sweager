@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom luxury colors (Graphite bases, deep slates, emerald green highlights) */
+  --color-luxury-charcoal: #141416;
+  --color-luxury-slate: #1B1B1E;
+  --color-luxury-card: #222226;
+  --color-luxury-border: rgba(255, 255, 255, 0.08);
+  --color-luxury-bronze: #10B981;
+  --color-luxury-bronze-dark: #059669;
+  --color-luxury-bronze-light: #34D399;
+  --color-luxury-cream: #E5E7EB;
+  --color-luxury-gold-glow: rgba(16, 185, 129, 0.12);
+}
+
+@layer base {
+  html, body, #root {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-luxury-charcoal);
+    color: var(--color-luxury-cream);
+    font-family: var(--font-sans);
+    cursor: none; /* Hide standard cursor for high-end lag cursor on non-touch devices */
+  }
+
+  /* Selection highlight styled premium */
+  ::selection {
+    background-color: var(--color-luxury-bronze);
+    color: var(--color-luxury-charcoal);
+  }
+
+  /* High quality persistent scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-luxury-charcoal);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-luxury-bronze-dark);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-luxury-bronze-light);
+  }
+}
+
+/* Custom CSS classes for 3D Tilt, blur Backdrops, details */
+.bg-elegant-pinstripe {
+  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.83 3.828 1.412-1.414L51.8 0h-2.83zm-37.94 0l-3.83 3.828-1.412-1.414L8.2 0h2.83zM34.627 0l.83.828-1.415 1.415L31.8 0h2.827zM25.373 0l-.83.828L25.96 2.243 28.2 0h-2.827zM28.97 0l3.83 3.828 1.412-1.414L31.8 0h-2.83zm-7.94 0l-3.83 3.828-1.412-1.414L18.2 0h2.83zM0 0l.828.828L0 1.657V0zm60 0l-.828.828L60 1.657V0zM0 60l.828-.828L0 58.343V60zm60 0l-.828-.828L60 58.343V60zM0 30l.828.828L0 31.657V30zm60 0l-.828.828L60 31.657V30z" fill="%23ffffff" fill-opacity="0.03" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+
+.text-luxury-stroke {
+  -webkit-text-stroke: 1px rgba(245, 239, 235, 0.15);
+  color: transparent;
+}
+
+.text-glow-bronze {
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.card-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+  border-color: var(--color-luxury-bronze-dark);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Fallback for devices without custom cursor or when touch is active */
+@media (hover: none) {
+  body {
+    cursor: auto !important;
+  }
+}
